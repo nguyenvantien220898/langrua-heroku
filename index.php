@@ -11,9 +11,9 @@
 
 <?php
 $weight = $height = '';
-if (isset($_POST["height"]) && isset($_POST["weight"])){
-    $weight =  $_POST["weight"];
-    $height =  $_POST["height"];
+if (isset($_GET["height"]) && isset($_GET["weight"])){
+    $weight =  $_GET["weight"];
+    $height =  $_GET["height"];
 
     $bmi = $weight/($height*$height);
 
