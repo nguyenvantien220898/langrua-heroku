@@ -26,11 +26,11 @@ if ($bmi<18.5){
 } elseif ($bmi >=25 && $bmi<29.9){
     echo "chỉ số BMI là : " . $bmi."<br>Phân loại:hơi béo";
 } elseif ($bmi >=30 && $bmi<24.9){
-    echo "chỉ số BMI là : " . $bmi. "<br>Phân loại:béo phí cấp 1";
+    echo "chỉ số BMI là : " . $bmi. "<br>Phân loại:béo phì cấp 1";
 } elseif ($bmi >=35 && $bmi<39.9){
-    echo "chỉ số BMI là : " . $bmi. "<br>Phân loại:béo phí cấp 2";
+    echo "chỉ số BMI là : " . $bmi. "<br>Phân loại:béo phì cấp 2";
 } elseif ($bmi >40){
-    echo "chỉ số BMI là : " . $bmi. "<br>Phân loại:béo phí cấp 3";
+    echo "chỉ số BMI là : " . $bmi. "<br>Phân loại:béo phì cấp 3";
 }
 ?>
 <div class="container">
