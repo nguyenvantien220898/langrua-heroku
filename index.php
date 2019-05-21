@@ -8,14 +8,29 @@
 
 </head>
 <body>
+
 <?php
+$weight = $height = '';
 if (isset($_POST["height"]) && isset($_POST["weight"])){
-    $weight = (int) $_POST["weight"];
-    $height = (int) $_POST["height"];
+    $weight =  $_POST["weight"];
+    $height =  $_POST["height"];
 
     $bmi = $weight/($height*$height);
 
-    echo "chỉ số BMI là : " . $bmi;
+
+}
+if ($bmi<18.5){
+    echo "chỉ số BMI là : " . $bmi. "<br>Phân loại:gầy";
+} elseif ($bmi >=18.5 && $bmi<25){
+    echo "chỉ số BMI là : " . $bmi. "<br>Phân loại:bình thường";
+} elseif ($bmi >=25 && $bmi<29.9){
+    echo "chỉ số BMI là : " . $bmi."<br>Phân loại:hơi béo";
+} elseif ($bmi >=30 && $bmi<24.9){
+    echo "chỉ số BMI là : " . $bmi. "<br>Phân loại:béo phí cấp 1";
+} elseif ($bmi >=35 && $bmi<39.9){
+    echo "chỉ số BMI là : " . $bmi. "<br>Phân loại:béo phí cấp 2";
+} elseif ($bmi >40){
+    echo "chỉ số BMI là : " . $bmi. "<br>Phân loại:béo phí cấp 3";
 }
 ?>
 <div class="container">
@@ -26,11 +41,11 @@ if (isset($_POST["height"]) && isset($_POST["weight"])){
             <form name="bmi" action="" method="post">
                 <div class="form-group">
                     <label >Chiều cao ( cm )</label>
-                    <input type="text" class="form-control" name="height" value="">
+                    <input type="text" class="form-control" name="height" value="<?php echo "$height"?>">
                 </div>
                 <div class="form-group">
                     <label >Cân nặng ( kg ) </label>
-                    <input type="text" class="form-control" name="weight">
+                    <input type="text" class="form-control" name="weight" value="<?php echo "$weight"?>">
                 </div>
                 <button type="submit" name="calc" class="btn btn-primary">Submit</button>
             </form>
