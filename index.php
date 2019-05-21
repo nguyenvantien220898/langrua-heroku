@@ -38,7 +38,7 @@ if ($bmi<18.5){
         <div class="col-sm-12">
             <h1>Tính chỉ số BMI</h1>
 
-            <form name="bmi" action="" method="post">
+            <form name="bmi" action="" method="get">
                 <div class="form-group">
                     <label >Chiều cao ( cm )</label>
                     <input type="text" class="form-control" name="height" value="<?php echo "$height"?>">
